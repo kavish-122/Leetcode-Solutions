@@ -18,42 +18,5 @@ class Solution {
     }
     public boolean isPalindrome(String s) {
         return checkPolindrome(s,0,s.length()-1);
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // if(s.equals(" ")){
-        //     return true;
-        // }
-        // int a = 0;
-        // int b = s.length()-1;
-        // while(a != b){
-
-        //     if(!((s.charAt(a) < 'a' && s.charAt(a) > 'z') || (s.charAt(a) >= 'A' && s.charAt(a) <= 'Z'))){
-        //         a++;
-        //     } 
-        //     if(!((s.charAt(b) < 'a' && s.charAt(b) > 'z') || (s.charAt(b) >= 'A' && s.charAt(b) <= 'Z'))){
-        //         b--;
-        //     } 
-    
-            
-        //     if (Character.toLowerCase(s.charAt(a)) == Character.toLowerCase(s.charAt(b))) {
-        //         a++;
-        //         b--;
-        //     } else {
-        //         return false;
-        //     }
-            
-        // }
-        // return true;
     }
 }
