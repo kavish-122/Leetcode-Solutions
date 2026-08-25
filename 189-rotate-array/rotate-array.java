@@ -1,23 +1,38 @@
 class Solution {
     public void rotate(int[] nums, int k) {
-        HashMap<Integer, Integer> map = new HashMap<>();
-        if(k>nums.length){
-            k = k%nums.length;
+        k = k % nums.length;
+
+        int arr[] = new int[k];
+        for(int i = nums.length - k; i < nums.length; i++) {
+            arr[i - (nums.length - k)] = nums[i];
         }
-        int i=0;
-        int j=nums.length-k;
-        int count = 0;
-        while(j<nums.length){
-            map.put(count++,nums[j]);
-            j++;
+        int m = nums.length - 1;
+
+        for(int i = nums.length - k - 1; i >= 0; i--) {
+            nums[m] = nums[i];
+            m--;
         }
-        while(i<(nums.length-k)){
-            map.put(count++,nums[i]);
-            i++;
+        for(int i = 0; i < k; i++) {
+            nums[i] = arr[i];
         }
-        for(int m=0; m<map.size(); m++){
-            nums[m] = map.get(m);
-        }
+        // HashMap<Integer, Integer> map = new HashMap<>();
+        // if(k>nums.length){
+        //     k = k%nums.length;
+        // }
+        // int i=0; 
+        // int j=nums.length-k;
+        // int count = 0;
+        // while(j<nums.length){
+        //     map.put(count++,nums[j]);
+        //     j++;
+        // }
+        // while(i<(nums.length-k)){
+        //     map.put(count++,nums[i]);
+        //     i++;
+        // }
+        // for(int m=0; m<map.size(); m++){
+        //     nums[m] = map.get(m);
+        // }
 
     }
 }
