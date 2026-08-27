@@ -3,16 +3,30 @@ class Solution {
         int max = 0;
         int count = 0;
         for(int i=0; i<nums.length; i++){
-            if(i==0||nums[i-1] != 1){
-                    count = 0;
+            if(nums[i] == 0){
+                count = 0;
             }
             if(nums[i] == 1){
                 count++;
             }
             if(count>max){
-                    max = count;
+                max = count;
             }
         }
         return max;
+        // int max = 0;
+        // int count = 0;
+        // for(int i=0; i<nums.length; i++){
+        //     if(i==0||nums[i-1] != 1){
+        //             count = 0;
+        //     }
+        //     if(nums[i] == 1){
+        //         count++;
+        //     }
+        //     if(count>max){
+        //         max = count;
+        //     }
+        // }
+        // return max;
     }
 }
