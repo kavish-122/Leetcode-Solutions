@@ -1,21 +1,29 @@
 class Solution {
     public int missingNumber(int[] nums) {
-
-        HashMap<Integer,Integer> map = new HashMap<>();
+        Arrays.sort(nums);
         for(int i=0; i<nums.length; i++){
-            map.put(nums[i],1);
-        }
-
-        for(int i=0; i<nums.length; i++){
-            if(map.get(i) == null){
+            if(i != nums[i]){
                 return i;
             }
         }
         return nums.length;
+        // USING HASHMAP
+
+        // HashMap<Integer,Integer> map = new HashMap<>();
+        // for(int i=0; i<nums.length; i++){
+        //     map.put(nums[i],1);
+        // }
+
+        // for(int i=0; i<nums.length; i++){
+        //     if(map.get(i) == null){
+        //         return i;
+        //     }
+        // }
+        // return nums.length;
 
 
 
-
+//  USING BRUTE FORCE
 
         // for(int i=0; i<nums.length; i++){
         //     int flag = 0;
