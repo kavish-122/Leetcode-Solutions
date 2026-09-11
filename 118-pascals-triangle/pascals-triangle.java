@@ -13,8 +13,8 @@ class Solution {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> list = new ArrayList<>();
         for(int i=1; i<=numRows; i++){
-            List<Integer> list1 = generateRow(i);
-            list.add(list1);
+            //List<Integer> list1 = generateRow(i);
+            list.add(generateRow(i));
         }
         return list;
     }
