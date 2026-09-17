@@ -1,5 +1,6 @@
 class Solution {
     public int[] sortArrayByParity(int[] nums) {
+        // USING TWO POINTER
         int start = 0;
         int end = nums.length-1;
         while(start<=end){
@@ -17,6 +18,7 @@ class Solution {
         }
         return nums;
 
+        // USING HASHMAP
         // HashMap<Integer,Integer> map = new HashMap<>();
         // int arr[] = new int[nums.length];
         // int s = 0;
