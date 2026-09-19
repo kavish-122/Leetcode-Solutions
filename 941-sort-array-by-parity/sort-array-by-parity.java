@@ -1,22 +1,37 @@
 class Solution {
     public int[] sortArrayByParity(int[] nums) {
-        // USING TWO POINTER
-        int start = 0;
-        int end = nums.length-1;
-        while(start<=end){
-            while(start < nums.length && nums[start]%2 == 0){
-                start++;
-            }
-            while(end >= 0 && nums[end]%2 != 0){
-                end--;
-            }
-            if(start<=end){
-                int temp = nums[start];
-                nums[start] = nums[end];
-                nums[end] = temp;
+        int temp[] = new int[nums.length];
+        int k = 0;
+        for(int i=0; i<nums.length; i++){
+            if(nums[i]%2 == 0){
+                temp[k] = nums[i];
+                k++;
             }
         }
-        return nums;
+        for(int i=0; i<nums.length; i++){
+            if(nums[i]%2 != 0){
+                temp[k] = nums[i];
+                k++;
+            }
+        }
+        return temp;
+        // USING TWO POINTER
+        // int start = 0;
+        // int end = nums.length-1;
+        // while(start<=end){
+        //     while(start < nums.length && nums[start]%2 == 0){
+        //         start++;
+        //     }
+        //     while(end >= 0 && nums[end]%2 != 0){
+        //         end--;
+        //     }
+        //     if(start<=end){
+        //         int temp = nums[start];
+        //         nums[start] = nums[end];
+        //         nums[end] = temp;
+        //     }
+        // }
+        // return nums;
 
         // USING HASHMAP
         // HashMap<Integer,Integer> map = new HashMap<>();
